@@ -1,0 +1,39 @@
+---
+layout: default
+title: Portfolio
+permalink: /me/
+---
+
+<section class="hero">
+  <div class="overlay">
+    <div class="container">
+      <div class="wrapper">
+        <p class="hero__wave-hand">👋</p>
+        <p>Halo, nama saya Adi.</p>
+        <h1 class="hero__description">Saya adalah seorang full-stack Ruby on Rails developer.</h1>
+        <img class="hero__profile-photo" src="/assets/images/profile-photo.jpg" alt="Adi Purnama">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="wrapper">
+    <h2>Tentang Saya</h2>
+    <p>Saya memiliki pengalaman profesional di bidang programming dan software engineering selama 4+ tahun. Memiliki ketertarikan dalam membangun aplikasi yang dapat membantu menyelesaikan permasalahan yang dihadapi.</p>
+    <p>Selain Ruby on Rails, saya juga memiliki pengetahuan di beberapa framework lain, seperti Laravel dan AdonisJS.</p>
+
+    <h2>Project</h2>
+
+    <div class="project-card-wrapper">
+      {% for project in site.data.projects %}
+      <div class="project-card">
+        <img src="{{ project.featured_image_url }}" alt="">
+        <h4>
+          <a {% if project.url != "#" %} target="_blank" {% endif %} href="{{ project.url }}">{{ project.name }}</a>
+        </h4>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

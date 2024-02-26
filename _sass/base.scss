@@ -1,0 +1,55 @@
+$backgroundColor: #ffffff;
+// $bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$bodyFont: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$scarlet: #F42C04;
+$salmon: #E2856E;
+$khaki: #ADA296;
+$cadetGray: #88A2AA;
+$richBlack: #0F1A20;
+
+body {
+  background: $backgroundColor;
+  color: $richBlack;
+  font-family: $bodyFont;
+  padding: 0;
+  margin: 0;
+}
+
+.post-detail {
+  & p {
+    line-height: 1.375em;
+  }
+
+  & a {
+    color: $scarlet;
+  }
+
+  & hr {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px dashed #dfdfdf;
+  }
+}
+
+code {
+  color: $salmon;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #f3f3f3;
+}
+
+@import "mixins/media.scss";
+
+@import "animations.scss";
+@import "resets.scss";
+@import "utils.scss";
+
+@import "components/footer.scss";
+@import "components/hero.scss";
+@import "components/navbar.scss";
+@import "components/post_card.scss";
+@import "components/post_list.scss";
+@import "components/post_hero.scss";
+@import "components/post_navigation.scss";
+@import "components/project_card.scss";
+@import "components/read_more.scss";

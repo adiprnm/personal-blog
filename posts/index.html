@@ -1,0 +1,52 @@
+---
+layout: default
+title: Semua Tulisan
+---
+
+<section class="hero">
+  <div class="overlay">
+      <div class="container">
+          <div class="wrapper">
+              <p class="hero__wave-hand">👋</p>
+              <p>Halo, selamat datang!</p>
+              <h1 class="hero__description">Sharing seputar programming dan software engineering.</h1>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="wrapper">
+    <h2>Semua Tulisan</h2>
+
+    <div class="post-list-wrapper">
+      {% for post in paginator.posts %}
+        <div class="post-list">
+          <img class="post-list__featured-image" src="{{ post.featured_image_url }}" alt="">
+          <div class="post-list__content">
+              <p class="post-list__published-at">
+                  {{ post.published_at }}
+              </p>
+              <h3 class="post-list__title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+              <p class="post-list__description">{{ post.short_description | default: post.exceprt }}</p>
+              <a href="{{ post.url }}">Baca selengkapnya</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <ul class="post-navigation">
+
+      <li>
+        {% if paginator.previous_page_path %}
+          <a href="{{ paginator.previous_page_path }}">← Sebelumnya</a>
+        {% endif %}
+      </li>
+      <li>
+        {% if paginator.next_page_path %}
+          <a href="{{ paginator.next_page_path }}">Selanjutnya →</a>
+        {% endif %}
+      </li>
+    </div>
+  </div>
+</section>

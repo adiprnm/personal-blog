@@ -1,0 +1,16 @@
+.read-more {
+    display: block;
+    margin: 2rem auto;
+    color: white;
+    background-color: $salmon;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    text-align: center;
+    max-width: max-content;
+    font-size: 0.875rem;
+
+    &:hover {
+      background-color: #ff9b82;
+    }
+}

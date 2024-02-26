@@ -1,0 +1,32 @@
+<footer class="footer">
+  <div class="container">
+    <div class="wrapper footer__wrapper">
+      <div>
+        <h3 class="footer__title">Layanan</h3>
+        <ul>
+          {% for service in site.data.services %}
+            <li>{{ service.name }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer__title">Media Sosial</h3>
+        <ul>
+          {% for account in site.data.social_media %}
+            <li><a target="_blank" href="{{ account.url }}">{{ account.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer__title">Kontak</h3>
+        <ul>
+          <li><a href="https://twitter.com/{{ site.twitter.username }}">DM Saya di Twitter</a></li>
+          <li><a href="mailto:{{ site.email }}">Hubungi via Email</a></li>
+        </ul>  
+      </div>
+    </div>
+    <p class="footer__copyright">© {{ "now" | date: "%Y" }} {{ site.title }}</p>
+  </div>
+</footer>

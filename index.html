@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<section class="hero">
+    <div class="overlay">
+        <div class="container">
+            <div class="wrapper">
+                <p class="hero__wave-hand">👋</p>
+                <p>Halo, selamat datang!</p>
+                <h1 class="hero__description">{{ site.tagline }}</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="wrapper">
+        <h2>Tulisan Terbaru</h2>
+
+        <div class="post-card-wrapper">
+            {% for post in site.posts limit:3 %}
+                <div class="post-card">
+                    <img class="post-card__featured-image" src="{{ post.featured_image_url }}" alt="">
+                    <div class="post-card__content">
+                        <p class="post-card__published-at">
+                            {{ post.published_at }}
+                        </p>
+                        <h3 class="post-card__title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                        <p class="post-card__description">{{ post.short_description | default: post.exceprt }}</p>
+                        <a href="{{ post.url }}">Baca selengkapnya</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="container">
+            <a class="read-more" href="/posts">Lihat Selengkapnya</a>
+        </div>
+    </div>
+</section>

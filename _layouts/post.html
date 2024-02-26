@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
+    {% seo %}
+  </head>
+  <body>
+    {% include navbar.html %}
+
+    <section class="post-hero">
+      <div class="post-hero__overlay">
+        <h1 class="post-hero__title">{{ page.title }}</h1>
+        <p class="post-hero__published-at">dipublikasikan pada {{ page.published_at }}</p>
+      </div>
+    </section>
+
+    <section class="post-detail">
+      <div class="container">
+        <div class="wrapper">
+          {{ content }}
+
+          <hr />
+          <ul class="post-navigation">
+            <li>
+              {% if page.previous %}
+                <a href="{{ page.previous.url }}">
+                  ←<br />
+                  {{ page.previous.title }}
+                </a>
+              {% endif %}
+            </li>
+            <li>
+              {% if page.next %}
+                <a href="{{ page.next.url }}">
+                  →<br />
+                  {{ page.next.title }}
+                </a>
+              {% endif %}
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    {% include footer.html %}
+  </body>
+</html>

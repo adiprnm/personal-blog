@@ -1,0 +1,44 @@
+.hero {
+    margin-top: 3rem;
+    background-color: $cadetGray;
+    opacity: 50;
+    color: white;
+    min-height: 250px;
+
+    &__wave-hand {
+        font-size: 3rem;
+        margin-bottom: 0;
+        animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+        animation-duration: 2.5s;        /* Change to speed up or slow down */
+        animation-iteration-count: infinite;  /* Never stop waving :) */
+        transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+        display: inline-block;
+    }
+
+    &__profile-photo {
+      height: 200px;
+      width: auto;
+      border-radius: 200px;
+      margin-bottom: 3rem;
+    }
+
+    &__description {
+        line-height: 1.5em;
+        font-weight: 600;
+    }
+
+    & .overlay {
+        background-color: rgba(0, 0, 0, 0.2);
+        min-height: inherit;
+        height: 100%;
+    }
+
+    &__post-title-wrapper {
+      height: 100%;
+    }
+
+    &__post-title {
+      text-align: center;
+      margin: auto;
+    }
+}

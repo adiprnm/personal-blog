@@ -1,0 +1,26 @@
+url: "adipurnm.my.id" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "adipurnm" # the name of your site, e.g. ACME Corp.
+tagline: Sharing seputar programming dan software engineering.
+description: Sharing seputar programming, website, dan software engineering.
+google_site_verification: google-site-verification=IiH3Ofey8Y2cbvKc6dp_yCPsEF9Hlk3zScc2LtxsHwk
+email: adipurnm84@gmail.com
+twitter:
+  username: adi_prnm
+  card: summary
+logo: /assets/images/favicon.png
+social:
+  name: Adi Purnama
+  links:
+  - https://twitter.com/adi_prnm
+  - https://www.tiktok.com/@manusiamenara
+# google_site_verification:
+locale: id_ID
+
+plugins:
+- jekyll-paginate
+- jekyll-seo-tag
+- jekyll-sitemap
+
+paginate: 5
+paginate_path: "/posts/page-:num/"

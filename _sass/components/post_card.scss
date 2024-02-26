@@ -1,0 +1,65 @@
+.post-card {
+  border: 1px solid #dfdfdf;
+  border-radius: 0.5rem;
+  height: max-content;
+
+  &__featured-image {
+    width: 100%;
+    object-fit: cover;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    height: 200px;
+  }
+
+  @include media(tabletAndUp) {
+    &__featured-image {
+      height: 150px;
+    }
+  }
+
+  &__content {
+    padding: 1rem;
+  }
+
+  &__title {
+    margin: 0;
+    margin-top: 0.5rem;
+    color: $salmon;
+
+    & a {
+      text-decoration: none;
+    }
+  }
+
+  &__published-at {
+    margin: 0;
+    font-size: 12px;
+    color: gray;
+  }
+
+  &__description {
+    line-height: 1.375em;
+  }
+
+  & a {
+    color: $salmon;
+
+    &:hover {
+      color: #ff9b82;
+    }
+  }
+
+  & div > a {
+    font-size: 14px;
+  }
+}
+
+.post-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+
+  @include media(tabletAndUp) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

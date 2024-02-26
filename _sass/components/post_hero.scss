@@ -1,0 +1,36 @@
+.post-hero {
+    min-height: 250px;
+    margin-top: 3.5rem;
+    flex-direction: column;
+    background-color: $cadetGray;
+    color: white;
+
+    &__overlay {
+        background-color: rgba(0, 0, 0, 0.2);
+        min-height: inherit;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      margin: 0 3rem;
+      text-align: center;
+    }
+
+    @include media(tabletAndUp) {
+      &__title {
+        font-size: 2rem;
+      }
+    }
+
+    &__published-at {
+      margin-bottom: 0;
+      color: #dfdfdf;
+      font-size: small;
+    }
+}

@@ -1,0 +1,36 @@
+.project-card {
+  border: 1px solid #dfdfdf;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & > img {
+    object-fit: cover;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    height: 150px;
+  }
+
+  & > h4 {
+    text-align: center;
+    margin: 1rem;
+    font-weight: 600;
+
+    & > a {
+      color: $salmon;
+      text-decoration: none;
+    }
+  }
+}
+
+.project-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  margin-bottom: 3rem;
+  gap: 1rem;
+
+  @include media(tabletAndUp) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
